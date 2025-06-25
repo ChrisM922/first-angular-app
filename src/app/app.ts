@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { Home } from './home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Home],
   template: `
-    <h1>Hello World!</h1>
+    <main>
+      <header class="brand-name">
+        <img src="/assets/logo.svg" alt="logo" class="brand-logo" aria-hidden="true" />
+      </header>
+      <section class="content">
+        <app-home></app-home>
+      </section>
+    </main>
   `,
   styleUrls: ['./app.css'],
 })
